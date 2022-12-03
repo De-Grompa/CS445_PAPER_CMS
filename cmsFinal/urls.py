@@ -18,8 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', include('login.urls')),
     path('myBinder/', include('myBinder.urls')),
     path('paperView/', include('paperView.urls')),
     path('gradeView/', include('gradeView.urls')),
+    path('account/', include('gradeView.urls')),
 ]
