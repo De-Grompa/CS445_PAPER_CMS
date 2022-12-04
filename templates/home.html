@@ -4,11 +4,15 @@
 {% if user.is_authenticated %}
 	Hello, {{ user.username }}!
 	<p><a href="{% url 'logout' %}">Log out</a></p>
+{% if user.is_admin %}
+	<p> View student papers </p>
+{% endif %}
 {% else %}
 
 	<p> You are not logged in! </p>
 	<a href="{% url 'login' %}">Log-in</a>
 	<p> Forgot password? </p>
 	<p> Or you can register an account! </p>
+	<a href="{% url 'register' %}">Register</a>
 {% endif %}
 {% endblock %}
