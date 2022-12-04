@@ -4,11 +4,13 @@
 {% if user.is_authenticated %}
 	Hello, {{ user.username }}!
 	<p><a href="{% url 'logout' %}">Log out</a></p>
+	<p> View <a href="{% url 'myBinder' %}"> My Binder </a></p>
 {% if user.is_admin %}
+	<p> Enter <a href="{% url 'gradeView' %}"> Grade View </a></p>
 	<p> View student papers </p>
+	<p><a href="{% url 'Paper View' %}"> Paper View </a></p>
 {% endif %}
 {% else %}
-
 	<p> You are not logged in! </p>
 	<a href="{% url 'login' %}">Log-in</a>
 	<p> Forgot password? </p>
