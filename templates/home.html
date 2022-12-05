@@ -2,14 +2,15 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 {% if user.is_authenticated %}
-	Hello, {{ user.username }}!
+	<p> Hello, {{ user.username }}! </p>
+	<p> Today is </p>
 	<p><a href="{% url 'logout' %}">Log out</a></p>
 	<p> View <a href="{% url 'myBinder' %}"> My Binder </a></p>
-{% if user.is_admin %}
-	<p> Enter <a href="{% url 'gradeView' %}"> Grade View </a></p>
-	<p> View student papers </p>
-	<p><a href="{% url 'Paper View' %}"> Paper View </a></p>
-{% endif %}
+	{% if user.is_staff %}
+		<p> Enter <a href="{% url 'gradeView' %}"> Grade View </a></p>
+		<p> View student papers in <a href="{% url 'paperView' %}"> Paper View </a> </p>
+	{% endif %}
+	
 {% else %}
 	<p> You are not logged in! </p>
 	<a href="{% url 'login' %}">Log-in</a>
