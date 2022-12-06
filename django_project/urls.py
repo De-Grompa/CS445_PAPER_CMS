@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from pipes import Template
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
@@ -31,4 +33,4 @@ urlpatterns = [
     path('account/paperView', TemplateView.as_view(template_name='paperView.html'), name='paperView'),
     path('account/gradeView', TemplateView.as_view(template_name='gradeView.html'), name='gradeView'),
     path('account/register/', register_user, name='register_user'),
-    ]
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

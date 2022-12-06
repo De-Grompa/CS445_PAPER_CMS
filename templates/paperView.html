@@ -3,10 +3,10 @@
 {% block title%} Paper View {% endblock %}
 {% block content %}
 <h2> Paper View </h2>
-<object data="{% static 'pdfExample.pdf' %}" type= "application/pdf"
+<object data="{% static 'pdf/pdfStudentA.pdf' %}" type= "application/pdf"
         width="65%" height="100%">
     <p>If you see this, your browser doesn't support PDFs.
-    You can download it <a href="{% static 'pdfExample.pdf' %}">here</a>.</p>
+    You can download it <a href="{% static 'pdf/pdfStudentA.pdf' %}">here</a>.</p>
 </object>
 <button type="button">Resubmit Assignment</button>
 {% endblock %}

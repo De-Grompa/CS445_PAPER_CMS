@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\django_project",
+    "\\static",
+    "\\static\\admin",
+    "\\templates",
+    "\\templates\\registration"
+  ],
+  "SelectedNode": "\\db.sqlite3",
+  "PreviewInSolutionExplorer": false
+}
