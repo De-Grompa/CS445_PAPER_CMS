@@ -17,6 +17,7 @@ from pipes import Template
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
+from .views import register_user
 
 urlpatterns = [
     #ADMIN
@@ -25,8 +26,9 @@ urlpatterns = [
     #FOR NON_ADMIN
     path('account/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('account/register/', TemplateView.as_view(template_name='register.html'), name='register'),
+    #path('account/register/', TemplateView.as_view(template_name='register.html'), name='register'),
     path('account/myBinder', TemplateView.as_view(template_name='myBinder.html'), name = 'myBinder'),
     path('account/paperView', TemplateView.as_view(template_name='paperView.html'), name='paperView'),
     path('account/gradeView', TemplateView.as_view(template_name='gradeView.html'), name='gradeView'),
+    path('account/register/', register_user, name='register_user'),
     ]
