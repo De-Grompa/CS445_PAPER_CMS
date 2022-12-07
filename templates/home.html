@@ -8,7 +8,6 @@
 	<p> View <a href="{% url 'myBinder' %}"> My Binder </a></p>
 	{% if user.is_staff %}
 		<p> Enter <a href="{% url 'gradeView' %}"> Grade View </a></p>
-		<p> View student papers in <a href="{% url 'paperView' %}"> Paper View </a> </p>
 	{% endif %}
 	
 {% else %}

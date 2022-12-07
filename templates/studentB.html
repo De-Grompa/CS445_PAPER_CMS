@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Grade View {% endblock %}
+{% load static %}
+{% block content %}
+
+<h2> Grade View </h2>
+<table class="gradeViewTable">
+    <tr>
+        <th>Assignment</th>
+        <th>Status</th>
+        <th>Grade</th>
+        <th>Date</th>
+    </tr>
+    <tr id="AssignmentA">
+        <td><a href="{% static 'pdf/StudentB1.pdf' %}">Assignment 1</a></td>
+        <td>Graded!</td>
+        <td>90% (A)</td>
+        <td>17 December 2022</td>
+    </tr>
+</table>
+{% endblock %}

@@ -1,28 +1,30 @@
 {% extends 'base.html' %}
-{% block title%} Grade View {% endblock %}
+{% block title %} Grade View {% endblock %}
+{% load static %}
 {% block content %}
+
 <h2> Grade View </h2>
-<table class= ="gradeViewTable">
+<table class ="gradeViewTable">
     <tr>
         <th>Student</th>
         <th>Status</th>
         <th>Grade</th>
         <th>S0 Number</th>
     </tr>
-    <tr>
-        <td>Student A</td>
+    <tr id="StudentA">
+        <td><a href="{% url 'studentA' %}">Student A</a></td>
         <td>1 ungraded, 2 submissions</td>
-        <td>84% (B)</td>
+        <td>100% (A)</td>
         <td>S05434185</td>
     </tr>
-    <tr>
-        <td>Student B</td>
+    <tr id="StudentB">
+        <td><a href="{% url 'studentB' %}">Student B</a></td>
         <td>0 ungraded, 1 submission</td>
         <td>90% (A)</td>
         <td>S07854318</td>
     </tr>
-    <tr>
-        <td>Student C</td>
+    <tr id="StudentC">
+        <td><a href="{% url 'studentC' %}">Student C</a></td>
         <td>0 ungraded, 0 submissions</td>
         <td>0% (F)</td>
         <td>S05492156</td>

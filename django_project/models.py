@@ -5,7 +5,7 @@ from django.conf import settings
 class User(AbstractUser):
     username = models.CharField(max_length=255, unique=True)
     password = models.CharField(max_length=255)
-    isAdmin = models.CharField(max_length=255)
+    is_staff = models.BooleanField(default=False)
     
 class Upload(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

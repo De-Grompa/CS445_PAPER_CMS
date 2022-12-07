@@ -33,4 +33,8 @@ urlpatterns = [
     path('account/paperView', TemplateView.as_view(template_name='paperView.html'), name='paperView'),
     path('account/gradeView', TemplateView.as_view(template_name='gradeView.html'), name='gradeView'),
     path('account/register/', register_user, name='register_user'),
+    path('account/StudentA/', TemplateView.as_view(template_name='studentA.html'), name='studentA'),
+    path('account/StudentB/', TemplateView.as_view(template_name='studentB.html'), name='studentB'),
+    path('account/StudentC/', TemplateView.as_view(template_name='studentC.html'), name='studentC'),
+    
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
