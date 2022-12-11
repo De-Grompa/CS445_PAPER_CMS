@@ -3,3 +3,4 @@ class user:
         self.username = _username
         self.group = _group
         self.isAdmin = _isAdmin
+

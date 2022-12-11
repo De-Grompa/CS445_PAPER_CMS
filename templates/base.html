@@ -1,11 +1,55 @@
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>{% block title %} Paper Management {% endblock %}</title>
-		<style type="text/css">
-			body { margin:0; padding:0; width:100%; color:#959595; font:normal 12px/2.0em Sans-Serif;} 
-		</style>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %} Paper Management {% endblock %}</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			color: #959595;
+			font: normal 20px/2.0em Sans-Serif;
+		}
+        .logoutinbutton {
+            background-color: #9f9f9f;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        table {
+			margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+            border: 1px solid black;
+			border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            background-color: #acaeb0;
+            color: black
+        }
+        td {
+            color: red
+        }
+        h2 {
+            background-color: red;
+            color: black;
+            padding: 20px;
+            border-radius: 0px;
+        }
+	</style>
+</head>
 	<body>
 		<main>
 			{% block content %}

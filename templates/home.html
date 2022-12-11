@@ -2,19 +2,21 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 {% if user.is_authenticated %}
+	<h2> Home </h2>
 	<p> Hello, {{ user.username }}! </p>
-	<p> Today is </p>
-	<p><a href="{% url 'logout' %}">Log out</a></p>
+	<p> Today is {% now "d-M-Y" %}</p>
 	<p> View <a href="{% url 'myBinder' %}"> My Binder </a></p>
 	{% if user.is_staff %}
 		<p> Enter <a href="{% url 'gradeView' %}"> Grade View </a></p>
 	{% endif %}
+	<p class="logoutinbutton"><a href="{% url 'logout' %}">Log out</a></p>
 	
 {% else %}
-	<p> You are not logged in! </p>
-	<a href="{% url 'login' %}">Log-in</a>
+	<h2> You are not logged in! </h2>
+	<p> Today is {% now "d-M-Y" %}</p>
+	<a href="{% url 'login' %}" class="logoutinbutton">Log in</a>
 	<p> Forgot password? </p>
 	<p> Or you can register an account! </p>
-	<a href="{% url 'register_user' %}">Register</a>
+	<a href="{% url 'register_user' %}" class="logoutinbutton">Register</a>
 {% endif %}
 {% endblock %}

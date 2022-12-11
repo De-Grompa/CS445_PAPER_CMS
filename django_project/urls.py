@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
 from .views import register_user
+from . import views
 
 urlpatterns = [
     #ADMIN
@@ -36,5 +37,6 @@ urlpatterns = [
     path('account/StudentA/', TemplateView.as_view(template_name='studentA.html'), name='studentA'),
     path('account/StudentB/', TemplateView.as_view(template_name='studentB.html'), name='studentB'),
     path('account/StudentC/', TemplateView.as_view(template_name='studentC.html'), name='studentC'),
+    
     
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -28,4 +28,8 @@ def register_user(request):
             form = UserRegistrationForm()
     return render(request, 'register.html', {'form': form})
 
+def home(request):
+    today = datetime.datetime.now()
+    return render(request, 'home.html', {'today': today})
+
 
